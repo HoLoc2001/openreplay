@@ -56,10 +56,10 @@ sudo apt update
 
 # setup docker
 info "Setting up Docker"
-sudo apt install docker.io docker-compose -y
+# sudo apt install docker.io docker-compose -y
 
-# enable docker without sudo
-sudo usermod -aG docker "${USER}" || true
+# # enable docker without sudo
+# sudo usermod -aG docker "${USER}" || true
 
 # Prompt for DOMAIN_NAME input
 echo -e "${GREEN}Please provide your domain name.${NC}"
@@ -115,8 +115,8 @@ case $yn in
 		exit 1;;
 esac
 
-sudo -E docker-compose --parallel 1 pull
-sudo -E docker-compose --profile migration up --force-recreate --build -d
+sudo -E docker compose --parallel 1 pull
+sudo -E docker compose --profile migration up --force-recreate --build -d
 cp common.env common.env.bak
 echo "🎉🎉🎉  Done! 🎉🎉🎉"
 

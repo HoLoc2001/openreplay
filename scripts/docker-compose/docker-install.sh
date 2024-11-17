@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://github.com/openreplay/openreplay"
+REPO_URL="https://github.com/HoLoc2001/openreplay"
 
 # Ask for the branch to clone (default is master/main)
 read -rp "Enter the version to clone (default is 'main'): " REPO_BRANCH
